@@ -56,54 +56,43 @@ function oddPositionDigitsCalculate (cardnumber) {
   
 }
 
-// function oddsDigitsCalculate (cpfnumber) {
+function evenPositionDigitsCalculate (cardnumber) {
   
-//   const fiftyDigits = cardcpfnumber.substring(0, 15).split('');
-//   const transformToNumbers = fiftyDigits.map(Number);
-  
-//   let arrayToSum = [];
-  
-//   for (num in transformToNumbers) {
-    
-//     let multiplyNumbers = (transformToNumbers[num]) * (11 - num);
-//     arrayToSum.push(multiplyNumbers);
-    
-//   }
-  
-//   let allDigitsSum = arrayToSum.reduce(function (a, b) {
-    
-//     return a + b;
-    
-//   });
-  
-//   let module = (allDigitsSum * 10) % 11;
-//   return module;
-  
-// }
+  const fifteenDigits = cardnumber.substring(0, 15).split('');
 
-// function checkCodesValidate (cpfnumber) {
+  const transformToNumbers = fifteenDigits.map(Number);
   
-//   let firstNumber = firstCodeValidate(cpfnumber).toString();
-//   let secondNumber = secondCodeValidate(cpfnumber).toString();
-//   if (firstNumber === cpfnumber.substring(9, 10) || secondNumber === cpfnumber.substring(10, 11)) {
-    
-//     return true;
-    
-//   } else {
-    
-//     return false;
-    
-//   }
+  let arrayEvensToSum = [];
+
+  for (num in transformToNumbers) {
+    let evensNumPosition = num % 2 !== 0;
+
+    if (evensNumPosition){
+      
+      let multiplyNumber = transformToNumbers[num];
+      arrayEvensToSum.push(multiplyNumber)
+    }
+  }
   
-// }
+  let allEvensDigitsSum = arrayEvensToSum.reduce(function (a, b) {
+    
+    return a + b;
+    
+  });
 
-// cpfValidator('38089124801');
+  return allEvensDigitsSum;
+  
+}
 
-checkLength('1245789632156478');
-checkIfSameNumber('1245789632156478');
+function sumAllDigits(cardnumber){
+  return oddPositionDigitsCalculate(cardnumber) + evenPositionDigitsCalculate(cardnumber);
+}
 
-// module.exports.cpfValidator = cpfValidator;
+checkLength('4539983237489397');
+checkIfSameNumber('4539983237489397');
+sumAllDigits('4539983237489397')
+
+// module.exports.cardValidator = cardValidator;
 
 module.exports.checkLength = checkLength;
 module.exports.checkIfSameNumber = checkIfSameNumber;
-// module.exports.checkCodesValidate = checkCodesValidate;
