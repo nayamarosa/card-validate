@@ -24,38 +24,37 @@ function checkIfSameNumber (cardnumber) {
 
 }
 
-// function evensDigitsCalculate (cardnumber) {
+function oddPositionDigitsCalculate (cardnumber) {
   
-//   const fiftyDigits = cardcpfnumber.substring(0, 15).split('');
-//   const transformToNumbers = fiftyDigits.map(Number);
+  const fifteenDigits = cardnumber.substring(0, 15).split('');
+
+  const transformToNumbers = fifteenDigits.map(Number);
+
+  let arrayOddsToSum = [];
+
+  for (num in transformToNumbers) {
+    let oddsNumPosition = num % 2 === 0;
+
+    if (oddsNumPosition){
+      
+      let multiplyNumber = transformToNumbers[num] * 2;
+
+      if(multiplyNumber > 9){
+        multiplyNumber = multiplyNumber - 9;
+      }
+      arrayOddsToSum.push(multiplyNumber)
+    }
+  }
   
-//   let arrayToSum = [];
+  let allOddsDigitsSum = arrayOddsToSum.reduce(function (a, b) {
+    
+    return a + b;
+    
+  });
+
+  return allOddsDigitsSum;
   
-//   for (num in transformToNumbers) {
-    
-//     let multiplyNumbers = (transformToNumbers[num]) * (10 - num);
-//     arrayToSum.push(multiplyNumbers);
-    
-//   }
-  
-//   let allDigitsSum = arrayToSum.reduce(function (a, b) {
-    
-//     return a + b;
-    
-//   });
-  
-//   let module = (allDigitsSum * 10) % 11;
-//   if (module === 10) {
-    
-//     return 0;
-    
-//   } else {
-    
-//     return module;
-    
-//   }
-  
-// }
+}
 
 // function oddsDigitsCalculate (cpfnumber) {
   
