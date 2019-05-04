@@ -1,0 +1,1 @@
+{"processes":{"9acf1844-3226-472d-aa98-78d0f881016f":{"parent":null,"children":["e2d72957-db07-43d0-9d56-3ab45e100c97"]},"e2d72957-db07-43d0-9d56-3ab45e100c97":{"parent":"9acf1844-3226-472d-aa98-78d0f881016f","children":[]}},"files":{"C:\\Projetos\\card-validator\\index.js":["e2d72957-db07-43d0-9d56-3ab45e100c97"]},"externalIds":{}}
