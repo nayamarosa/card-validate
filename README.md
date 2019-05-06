@@ -6,19 +6,19 @@ Na versão atual é possível validar o número, de um possível cartão de cré
 
 ## Como instalar:
 
-```shell
+```bash
 
-$  npm install
+$  npm install card-validator-gtech
 
 ```
 
 ## Como utilizar:
 
-```node
+```javascript
 
-> 
-> 
-> 
+> const isValidCpf = require("cpf-validator-gtech");
+> console.log(isValidCpf.cpfValidator("4539983237489397"))
+> // returns true
 
 ```
 
