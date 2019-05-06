@@ -16,8 +16,8 @@ $  npm install card-validator-gtech
 
 ```javascript
 
-> const isValidCpf = require("cpf-validator-gtech");
-> console.log(isValidCpf.cpfValidator("4539983237489397"))
+> const isValidCard = require("card-validator-gtech");
+> console.log(isValidCard.cardValidator("4539983237489397"))
 > // returns true
 
 ```
