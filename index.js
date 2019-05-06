@@ -42,5 +42,4 @@ function hasSameDigitValidator(cardnumber) {
   return isSameDigitValidator;
 }
 
-cardValidator('4539983237489397');
 module.exports.cardValidator = cardValidator;
